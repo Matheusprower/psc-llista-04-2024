@@ -1,0 +1,56 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+		System.out.println("Escolha seu nome");
+		String nome = sc.nextLine();
+		int letras = nome.length();
+		
+		while (letras < 3) {
+		    System.out.println("Escolha um nome que tenha mais de 3 letras");
+		    nome = sc.nextLine();
+		    letras = nome.length();
+		}
+		
+		System.out.println("Seu nome é: " + nome + "\nEscolha sua idade");
+		int idade = sc.nextInt();
+		
+		while (idade < 0 || idade > 150) {
+		    System.out.println("Escolha uma idade válida");
+		    idade = sc.nextInt();
+		}
+		
+		System.out.println("Sua idade é: " + idade + "\nEscolha seu salário");
+		double salario = sc.nextDouble();
+		
+		while (salario < 0) {
+		    System.out.println("Escolha um salário válido");
+		    salario = sc.nextDouble();
+		}
+		
+		System.out.println("Seu salário é: " + salario + "\nEscolha seu sexo (F para mulher, M para homem)");
+		String sexo = sc.nextLine();
+		
+		while (!sexo.equals("F") && !sexo.equals("M")) {
+		    System.out.println("Escolha um sexo válido");
+		    sexo = sc.nextLine();
+		}
+		
+		System.out.println("Seu sexo é: " + sexo + "\nEscolha seu estado cívil(Solteiro = S, Casado = C, Viúvo = V, Divorsiado = D)");
+		String estado = sc.nextLine();
+		
+		while (!estado.equals("S") && !estado.equals("C") && !estado.equals("V") && !estado.equals("D")) {
+		    System.out.println("Escolha um estado cívil válido");
+		    estado = sc.nextLine();
+		}
+		
+		System.out.println("Suas informações são: ");
+		System.out.println("Nome: " + nome);
+		System.out.println("Idade: " + idade);
+		System.out.println("Salário: " + salario);
+		System.out.println("Sexo: " + sexo);
+		System.out.println("Estado Cívil: " + estado);
+		sc.close();
+	}
+}
