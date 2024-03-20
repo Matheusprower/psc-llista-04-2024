@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+		System.out.println("Escolha seu nome");
+		String nome = sc.nextLine();
+		System.out.println("Escolha sua senha");
+		String senha = sc.nextLine();
+		
+		while (nome.equals(senha)) {
+		    System.out.println("Escolha uma senha diferente do nome\nEscolha seu nome");
+		    nome = sc.nextLine();
+		    System.out.println("Escolha sua senha");
+		    senha = sc.nextLine();
+		}
+		System.out.println("Seu nome é: " + nome + "\nSua senha é: " + senha);
+	}
+}
