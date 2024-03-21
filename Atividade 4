@@ -1,0 +1,13 @@
+public class Main
+{
+	public static void main(String[] args) {
+	    double pa = 80000, pb = 200000, pa1 = 3, pb1 = 1.5;
+	    int ano = 0;
+		while (pa < pb) {
+		    pa = pa + (pa * pa1 / 100);
+		    pb = pb + (pb * pb1 / 100);
+		    ano++;
+		}
+		System.out.println("O país A passou o país B na quantidade populacional em " + ano + " anos.");
+	}
+}
