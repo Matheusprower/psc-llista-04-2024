@@ -1,0 +1,29 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+	    int fechamento = 0, fim = 0, ano = 0;
+	    double pa = 0, pb = 0, pa1 = 0, pb1 = 0;
+	    while (fechamento == 0) {
+	        System.out.println("Digite o valor da população do país A");
+	        pa = sc.nextDouble();
+	        System.out.println("Digite o valor da população do país B");
+	        pb = sc.nextDouble();
+	        System.out.println("Digite o valor do crescimento populacional anual da população do país A");
+	        pa1 = sc.nextDouble();
+	        System.out.println("Digite o valor do crescimento populacional anual da população do país B");
+	        pb1 = sc.nextDouble();
+	        while (pa < pb) {
+	            pa = pa + (pa * pa1 / 100);
+	            pb = pb + (pb * pb1 / 100);
+	            ano++;
+	            
+	        }
+	        System.out.println("O país A passou o país B na quantidade populacional em " + ano + " anos. Digite qualquer número para reiniciar");
+	        fim = sc.nextInt();
+	        ano = 0;
+	        pa = 0; pb = 0; pa1 = 0; pb1 = 0;
+	    }
+	}
+}
