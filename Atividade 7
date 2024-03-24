@@ -1,0 +1,39 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+	    double n1, n2, n3, n4, n5, maior, reset = 0;
+		System.out.println("Escreva 5 números");
+		n1 = sc.nextDouble();
+		n2 = sc.nextDouble();
+		n3 = sc.nextDouble();
+		n4 = sc.nextDouble();
+		n5 = sc.nextDouble();
+		maior = n1;
+		
+		while (reset == 0) {
+		    
+		if (maior >= n2) {
+		    if (maior >= n3) {
+		        if (maior >= n4) {
+		            if (maior >= n5) {
+		                reset = 1;
+		            } else {
+		                maior = n5;
+		                reset = 1;
+		            }
+		        } else {
+		            maior = n4;
+		        }
+		    } else {
+		        maior = n3;
+		    }
+		} else {
+		    maior = n2;
+		}
+		}
+		System.out.println("O maior número é: " + maior);
+		sc.close();
+	}
+}
