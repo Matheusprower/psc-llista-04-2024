@@ -1,0 +1,14 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+	    double n1;
+	    for (n1 = 1; n1 <= 50; n1++) {
+	        if (n1 % 2 != 0) {
+	            System.out.println(n1+ ", ");
+	        }
+	    }
+		sc.close();
+	}
+}
